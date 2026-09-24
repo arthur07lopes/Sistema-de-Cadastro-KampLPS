@@ -26,7 +26,7 @@ class JanelaPrincipal(wx.Frame):
 
         self.lista = wx.ListCtrl(painel, style=wx.LC_REPORT)
         self.lista.InsertColumn(0, "Nome", width=400)
-        self.lista.SetName("Lista de pessoas cadastradadas")
+        self.lista.SetName("Lista de pessoas cadastradas")
 
         btn_adicionar = wx.Button(painel, label="&Adicionar")
         btn_adicionar.SetName("Botão adicionar pessoa")
