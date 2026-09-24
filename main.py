@@ -6,6 +6,6 @@ from ui.janela_principal import JanelaPrincipal
 if __name__ == "__main__":
   app = wx.App()
   gerenciador = GerenciadorPessoas()
-  janela = JanelaPrincipal()
+  janela = JanelaPrincipal(gerenciador)
   janela.show()
   app.MainLoop()
