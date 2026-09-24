@@ -15,7 +15,7 @@ class JanelaPrincipal(wx.Frame):
         painel = wx.Panel(self)
         painel.SetBackgroundColour(COR_FUNDO)
 
-        label_busca = wx.StaticText(painel, label="Buscar por Letra:")
+        label_busca = wx.StaticText(painel, label="&Buscar por Letra:")
         label_busca.SetForegroundColour(COR_TEXTO)
 
         self.campo_busca = wx.TextCtrl(painel)
@@ -25,6 +25,8 @@ class JanelaPrincipal(wx.Frame):
         btn_buscar.SetName("Botão Buscar")
         btn_buscar.Bind(wx.EVT_BUTTON, self.ao_clicar_buscar)
 
+        lbl_lista = wx.StaticText(painel, label="&Lista de pessoas cadastradas:")
+        
         self.lista = wx.ListCtrl(painel, style=wx.LC_REPORT)
         self.lista.InsertColumn(0, "Nome", width=400)
         self.lista.SetName("Lista de pessoas cadastradas")
@@ -50,10 +52,15 @@ class JanelaPrincipal(wx.Frame):
         sizer_botoes.Add(btn_adicionar, 0, wx.ALL, 5)
         sizer_botoes.Add(btn_editar, 0, wx.ALL, 5)
         sizer_botoes.Add(btn_remover, 0, wx.ALL, 5)
+        
+        sizer_lista = wx.BoxSizer(wx.VERTICAL)
+        sizer_lista.Add(lbl_lista, 0, wx.ALL, 5)
+        sizer_lista.Add(self.lista, 1, wx.ALL | wx.EXPAND, 5)
+        
 
         sizer_principal = wx.BoxSizer(wx.VERTICAL)
         sizer_principal.Add(sizer_busca, 0, wx.EXPAND)
-        sizer_principal.Add(self.lista, 1, wx.EXPAND | wx.ALL, 10)
+        sizer_principal.Add(sizer_lista, 1, wx.EXPAND | wx.ALL, 10)
         sizer_principal.Add(sizer_botoes, 0, wx.CENTER)
 
         painel.SetSizer(sizer_principal)
