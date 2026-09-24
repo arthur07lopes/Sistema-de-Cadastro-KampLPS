@@ -70,7 +70,7 @@ class JanelaPrincipal(wx.Frame):
         if letra.strip() == "":
             self.atualizar_lista(self.gerenciador.listar_ordenado())
         else:
-            self.atualizar_lista(self.gerenciador.busca_por_inicial(letra))
+            self.atualizar_lista(self.gerenciador.buscar_por_inicial(letra))
 
     def ao_clicar_adicionar(self, evento):
         dialogo = DialogoPessoa(titulo="Adicionar pessoa")
