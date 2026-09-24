@@ -8,7 +8,7 @@ class DialogoPessoa(wx.Dialog):
         painel = wx.Panel(self)
         painel.SetBackgroundColour(wx.Colour(30, 30, 33))
 
-        label = wx.StaticText(painel, label="Nome:")
+        label = wx.StaticText(painel, label="&Nome:")
         label.SetForegroundColour(wx.Colour(230, 230, 230))
 
         self.campo_nome = wx.TextCtrl(painel, value=nome_inicial)
@@ -32,4 +32,3 @@ class DialogoPessoa(wx.Dialog):
 
     def obter_nome(self):
         return self.campo_nome.GetValue()
-        
