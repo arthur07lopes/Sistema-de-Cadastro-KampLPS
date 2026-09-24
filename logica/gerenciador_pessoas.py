@@ -37,6 +37,7 @@ class GerenciadorPessoas():
 
     def listar_ordenado(self):
         lista_ordenada = sorted(self.pessoas, key=lambda p: p["nome"].lower())
+        return lista_ordenada
 
     def buscar_por_inicial(self, letra):
         letra = letra.strip().upper()
