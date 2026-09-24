@@ -3,7 +3,7 @@ import wx
 class DialogoPessoa(wx.Dialog):
     def __init__(self, titulo, nome_inicial=""):
         super().__init__(None, title=titulo, size=(350, 150))
-        self.SetBackGroundColour(wx.Colour(30, 30, 33))
+        self.SetBackgroundColour(wx.Colour(30, 30, 33))
 
         painel = wx.Panel(self)
         painel.SetBackgroundColour(wx.Colour(30, 30, 33))
