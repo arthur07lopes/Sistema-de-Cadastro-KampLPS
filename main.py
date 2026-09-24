@@ -7,5 +7,5 @@ if __name__ == "__main__":
   app = wx.App()
   gerenciador = GerenciadorPessoas()
   janela = JanelaPrincipal(gerenciador)
-  janela.show()
+  janela.Show()
   app.MainLoop()
