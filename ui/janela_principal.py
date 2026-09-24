@@ -1,5 +1,5 @@
 import wx
-from dialogos import DialogoPessoa
+from .dialogos import DialogoPessoa
 
 COR_FUNDO = wx.Colour(20, 20, 22) # preto
 COR_PAINEL = wx.Colour(30, 30, 33) # cinza com tom escuro
